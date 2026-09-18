@@ -77,7 +77,7 @@ export function AboutPage() {
                 border: '4px solid #FFFFFF'
               }}>
                 <img 
-                  src="https://i.postimg.cc/SRvpRv73/Whats-App-Image-2026-09-09-at-6-25-02-PM.jpg" 
+                  src="/antonio-hernandez.jpg" 
                   alt="Antonio Hernández"
                   style={{ width: '100%', height: '540px', objectFit: 'cover' }}
                 />

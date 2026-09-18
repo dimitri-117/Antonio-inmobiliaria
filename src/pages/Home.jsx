@@ -373,7 +373,7 @@ export function Home() {
                 border: '4px solid #FFFFFF'
               }}>
                 <img 
-                  src="https://i.postimg.cc/SRvpRv73/Whats-App-Image-2026-09-09-at-6-25-02-PM.jpg" 
+                  src="/antonio-hernandez.jpg" 
                   alt="Antonio Hernández - Asesor Inmobiliario"
                   style={{ width: '100%', height: '500px', objectFit: 'cover' }}
                 />
