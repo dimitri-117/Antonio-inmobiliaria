@@ -55,10 +55,10 @@ export function PropertiesPage() {
     <div>
       {/* Header Banner */}
       <section style={{
-        background: 'linear-gradient(180deg, #090D16 0%, #0F172A 100%)',
+        background: 'linear-gradient(180deg, #121A22 0%, #1A2530 100%)',
         color: '#FFFFFF',
         padding: '60px 0 40px 0',
-        borderBottom: '1px solid rgba(212,175,55,0.2)'
+        borderBottom: '1px solid rgba(197, 160, 89, 0.25)'
       }}>
         <div className="container">
           <span className="gold-badge dark" style={{ marginBottom: '12px' }}>Catálogo Exclusivo</span>
@@ -190,7 +190,7 @@ export function PropertiesPage() {
                       top: '16px',
                       left: '16px',
                       background: 'var(--gold-gradient)',
-                      color: '#0F172A',
+                      color: '#FFFFFF',
                       fontWeight: 700,
                       padding: '4px 12px',
                       borderRadius: '8px',
@@ -202,7 +202,7 @@ export function PropertiesPage() {
                       position: 'absolute',
                       bottom: '16px',
                       right: '16px',
-                      background: 'rgba(15, 23, 42, 0.85)',
+                      background: 'rgba(26, 37, 48, 0.85)',
                       color: '#FFFFFF',
                       backdropFilter: 'blur(8px)',
                       fontWeight: 700,

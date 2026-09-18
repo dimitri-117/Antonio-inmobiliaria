@@ -20,10 +20,10 @@ export function ContactPage() {
     <div>
       {/* Header Banner */}
       <section style={{
-        background: 'linear-gradient(180deg, #090D16 0%, #0F172A 100%)',
+        background: 'linear-gradient(180deg, #121A22 0%, #1A2530 100%)',
         color: '#FFFFFF',
         padding: '60px 0 40px 0',
-        borderBottom: '1px solid rgba(212,175,55,0.2)'
+        borderBottom: '1px solid rgba(197, 160, 89, 0.25)'
       }}>
         <div className="container">
           <span className="gold-badge dark" style={{ marginBottom: '12px' }}>Atención Personalizada</span>
@@ -132,7 +132,7 @@ export function ContactPage() {
               
               {/* WhatsApp Card */}
               <div style={{
-                background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+                background: 'linear-gradient(135deg, #121A22 0%, #1A2530 100%)',
                 padding: '32px',
                 borderRadius: '24px',
                 color: '#FFFFFF',
@@ -224,7 +224,7 @@ export function ContactPage() {
             height: '380px',
             position: 'relative',
             border: '1px solid #E2E8F0',
-            background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+            background: 'linear-gradient(135deg, #121A22 0%, #1A2530 100%)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -233,7 +233,7 @@ export function ContactPage() {
             padding: '24px'
           }}>
             <div>
-              <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'rgba(212,175,55,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto', color: 'var(--gold-primary)' }}>
+              <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'rgba(197,160,89,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto', color: 'var(--gold-primary)' }}>
                 <MapPin size={32} />
               </div>
               <h3 style={{ fontSize: '1.8rem', color: '#FFFFFF', marginBottom: '8px' }}>Morelia, Michoacán</h3>

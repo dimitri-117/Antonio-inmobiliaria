@@ -20,7 +20,7 @@ export function WhatsAppButton({ propertyTitle }) {
     }}>
       {/* Floating Tooltip */}
       <div style={{
-        background: '#0F172A',
+        background: '#1A2530',
         color: '#FFFFFF',
         padding: '10px 16px',
         borderRadius: '12px',

@@ -48,7 +48,7 @@ export function PropertyModal({ property, onClose }) {
         </button>
 
         {/* Main Image Showcase */}
-        <div style={{ position: 'relative', height: '380px', backgroundColor: '#090D16' }}>
+        <div style={{ position: 'relative', height: '380px', backgroundColor: '#121A22' }}>
           <img 
             src={activeImage} 
             alt={property.title}
@@ -83,7 +83,7 @@ export function PropertyModal({ property, onClose }) {
             display: 'flex',
             gap: '12px',
             padding: '16px 24px',
-            backgroundColor: '#090D16',
+            backgroundColor: '#121A22',
             overflowX: 'auto'
           }}>
             {property.gallery.map((imgUrl, idx) => (
@@ -218,7 +218,7 @@ export function PropertyModal({ property, onClose }) {
 
           {/* Direct Advisor Banner */}
           <div style={{
-            background: 'linear-gradient(135deg, rgba(212,175,55,0.15) 0%, rgba(15,23,42,0.8) 100%)',
+            background: 'linear-gradient(135deg, rgba(197,160,89,0.15) 0%, rgba(26,37,48,0.8) 100%)',
             border: '1px solid var(--gold-primary)',
             borderRadius: '16px',
             padding: '24px',

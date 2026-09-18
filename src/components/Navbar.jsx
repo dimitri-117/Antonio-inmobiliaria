@@ -13,9 +13,9 @@ export function Navbar() {
       position: 'sticky',
       top: 0,
       zIndex: 900,
-      backgroundColor: 'rgba(15, 23, 42, 0.95)',
+      backgroundColor: 'rgba(26, 37, 48, 0.96)',
       backdropFilter: 'blur(12px)',
-      borderBottom: '1px solid rgba(212, 175, 55, 0.2)',
+      borderBottom: '1px solid rgba(197, 160, 89, 0.25)',
       boxShadow: '0 4px 20px rgba(0,0,0,0.3)'
     }}>
       <div className="container" style={{
@@ -26,19 +26,18 @@ export function Navbar() {
       }}>
         {/* Brand Logo */}
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '14px', textDecoration: 'none' }}>
-          <div style={{
-            width: '46px',
-            height: '46px',
-            borderRadius: '12px',
-            background: 'linear-gradient(135deg, #F59E0B 0%, #D4AF37 50%, #B45309 100%)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#0F172A',
-            boxShadow: '0 0 20px rgba(212, 175, 55, 0.4)'
-          }}>
-            <Building2 size={26} strokeWidth={2.2} />
-          </div>
+          <img 
+            src="/logo.jpg" 
+            alt="Antonio Hernández Inmobiliaria" 
+            style={{
+              height: '52px',
+              width: '52px',
+              borderRadius: '10px',
+              objectFit: 'cover',
+              boxShadow: '0 0 15px rgba(197, 160, 89, 0.4)',
+              border: '1.5px solid rgba(197, 160, 89, 0.5)'
+            }} 
+          />
           <div>
             <div style={{
               fontSize: '1.25rem',
@@ -198,7 +197,7 @@ export function Navbar() {
       {/* Mobile Drawer Navigation */}
       {isOpen && (
         <div style={{
-          backgroundColor: '#0F172A',
+          backgroundColor: '#1A2530',
           borderBottom: '1px solid var(--navy-border)',
           padding: '24px 32px',
           display: 'flex',

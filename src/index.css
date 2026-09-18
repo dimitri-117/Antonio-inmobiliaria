@@ -1,60 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   /* ============================================
-     PALETA CASA SERENA
+     PALETA DE COLORES CORPORATIVA INMOBILIARIA
      ============================================ */
 
-  /* Fondos Principales */
-  --bg-primary: #22693E;        /* Sea Green  — headers, navbar, footer */
-  --bg-secondary: #87C698;      /* Sage Green — secciones secundarias    */
-  --bg-card: rgba(205, 236, 227, 0.75); /* Light Seafoam, glassmorphism  */
-  --bg-card-light: #F0FAF7;     /* Mint Cream  — tarjetas claras         */
-  --bg-light: #F0FAF7;          /* Mint Cream  — fondo principal páginas */
-  --bg-light-alt: #DEF2F7;      /* Pale Sky Blue — secciones alternas    */
+  /* Azul Noche (#1A2530): Titulares principales, logotipos y fondos de secciones clave */
+  --bg-primary: #1A2530;        /* Azul Noche — headers, navbar, footer, secciones oscuras */
+  --navy-deep: #1A2530;         /* Azul Noche */
+  --navy-dark: #121A22;         /* Azul Noche muy oscuro para footer */
+  --navy-surface: #243240;      /* Azul Noche suave para cards oscuras */
+  --navy-border: rgba(197, 160, 89, 0.25);
 
-  /* Accent / CTA System  (reemplaza "Gold") */
-  --gold-primary: #DC143C;      /* Crimson Red  — botones CTA destacados */
-  --gold-hover: #a50e2d;        /* Crimson Red oscuro — hover            */
-  --gold-light: #fce4ea;        /* Rosa muy claro — fondos badge/toast   */
-  --gold-gradient: linear-gradient(135deg, #DC143C 0%, #a50e2d 100%);
-  --gold-glow: 0 0 25px rgba(220, 20, 60, 0.3);
+  /* Dorado Metálico (#C5A059): Acento cálido corporativo, botones CTA y detalles gráficos */
+  --gold-primary: #C5A059;      /* Dorado Metálico — CTA destacados */
+  --gold-hover: #A6833E;        /* Dorado Metálico oscuro — hover */
+  --gold-light: #F7F3E9;        /* Fondo claro para badges */
+  --gold-gradient: linear-gradient(135deg, #C5A059 0%, #9F7E3F 100%);
+  --gold-glow: 0 0 25px rgba(197, 160, 89, 0.35);
 
-  /* Paleta Verde (reemplaza "Navy") */
-  --navy-dark: #1a4f2e;         /* Sea Green muy oscuro                  */
-  --navy-deep: #22693E;         /* Sea Green — fondo oscuro principal    */
-  --navy-surface: #2e7d4f;      /* Sea Green medio — superficies         */
-  --navy-border: rgba(135, 198, 152, 0.25); /* Sage Green translúcido    */
+  /* Gris Grafito (#2B2D31): Cuerpo de texto prolongado y copys estructurados */
+  --text-dark: #2B2D31;         /* Gris Grafito — texto principal */
+  --text-body: #2B2D31;         /* Gris Grafito — cuerpo de texto */
+  --text-muted: #6B7280;        /* Gris medio para subtítulos/metadatos */
+  --text-white: #FFFFFF;        /* Blanco Puro para contraste en fondos oscuros */
 
-  /* Texto */
-  --text-white: #FFFFFF;
-  --text-muted: #87C698;        /* Sage Green — texto secundario/muted   */
-  --text-dark: #2A3633;         /* Charcoal Black — texto principal      */
-  --text-body: #2A3633;         /* Charcoal Black — cuerpo de texto      */
+  /* Blanco Puro (#FFFFFF): Base para los fondos generales, espacio negativo */
+  --bg-light: #FFFFFF;          /* Blanco Puro — fondo principal de la página */
+  --bg-card: #FFFFFF;           /* Blanco Puro — fondo tarjetas */
+  --bg-card-light: #FFFFFF;
+
+  /* Gris Plata (#E5E7EB): Tono neutro para cintillos informativos y tarjetas alternas */
+  --bg-secondary: #E5E7EB;      /* Gris Plata — secciones secundarias y cintillos */
+  --bg-light-alt: #F3F4F6;      /* Gris Plata tenue — secciones alternas */
+  --silver-gray: #E5E7EB;       /* Gris Plata */
+  --border-color: #E5E7EB;      /* Gris Plata para bordes */
 
   /* Utilidades */
-  --success: #22693E;           /* Sea Green                             */
+  --success: #10B981;
   --whatsapp: #25D366;
   --whatsapp-hover: #20BA5A;
 
-  /* Colores de apoyo directos */
-  --mint-cream: #F0FAF7;
-  --pale-sky-blue: #DEF2F7;
-  --sage-green: #87C698;
-  --crimson-red: #DC143C;
-  --sea-green: #22693E;
-  --charcoal: #2A3633;
-  --seafoam: #CDECE3;
-
-  /* Fuentes */
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
+  /* Fuentes Limpias y Modernas: Montserrat */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', 'Inter', sans-serif;
 
   /* Sombras y Radios */
-  --shadow-sm: 0 4px 10px rgba(42, 54, 51, 0.06);
-  --shadow-md: 0 10px 25px rgba(42, 54, 51, 0.12);
-  --shadow-lg: 0 20px 40px rgba(42, 54, 51, 0.18);
-  --shadow-gold: 0 10px 30px rgba(220, 20, 60, 0.2);
+  --shadow-sm: 0 4px 10px rgba(26, 37, 48, 0.05);
+  --shadow-md: 0 10px 25px rgba(26, 37, 48, 0.10);
+  --shadow-lg: 0 20px 40px rgba(26, 37, 48, 0.15);
+  --shadow-gold: 0 10px 25px rgba(197, 160, 89, 0.30);
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -85,6 +80,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
+  color: var(--navy-deep);
 }
 
 a {
@@ -108,15 +104,15 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
-/* Badge Esmeralda / CTA */
+/* Badge Corporativo / Dorado Metálico */
 .gold-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 6px 16px;
-  background: rgba(135, 198, 152, 0.18);
-  border: 1px solid rgba(34, 105, 62, 0.3);
-  color: #22693E;
+  background: rgba(197, 160, 89, 0.12);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  color: var(--gold-primary);
   font-weight: 600;
   font-size: 0.85rem;
   border-radius: var(--radius-full);
@@ -125,25 +121,25 @@ button {
 }
 
 .gold-badge.dark {
-  background: rgba(135, 198, 152, 0.2);
-  color: var(--sage-green);
-  border-color: rgba(135, 198, 152, 0.45);
+  background: rgba(197, 160, 89, 0.2);
+  color: var(--gold-primary);
+  border-color: rgba(197, 160, 89, 0.5);
 }
 
 /* Glassmorphism Card */
 .glass-card {
-  background: rgba(240, 250, 247, 0.88);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(205, 236, 227, 0.6);
+  border: 1px solid var(--silver-gray);
   box-shadow: var(--shadow-md);
 }
 
 .glass-card-dark {
-  background: rgba(34, 105, 62, 0.88);
+  background: rgba(26, 37, 48, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(135, 198, 152, 0.25);
+  border: 1px solid rgba(197, 160, 89, 0.25);
   box-shadow: var(--shadow-lg);
   color: var(--text-white);
 }
@@ -167,7 +163,7 @@ button {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(220, 20, 60, 0.4);
+  box-shadow: 0 15px 35px rgba(197, 160, 89, 0.45);
   color: #FFFFFF;
 }
 
@@ -177,8 +173,8 @@ button {
   justify-content: center;
   gap: 10px;
   padding: 14px 28px;
-  background: rgba(240, 250, 247, 0.15);
-  border: 1px solid rgba(205, 236, 227, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: var(--text-white);
   font-weight: 600;
   font-size: 1rem;
@@ -187,9 +183,9 @@ button {
 }
 
 .btn-secondary:hover {
-  background: rgba(240, 250, 247, 0.25);
-  border-color: var(--sage-green);
-  color: var(--sage-green);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
 }
 
 .btn-outline-dark {
@@ -231,8 +227,19 @@ button {
   background-color: var(--bg-light-alt);
 }
 
+.section-secondary {
+  background-color: var(--bg-secondary);
+}
+
 .section-dark {
   background-color: var(--navy-deep);
+  color: var(--text-white);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
   color: var(--text-white);
 }
 
@@ -257,7 +264,7 @@ button {
 .form-input, .form-select, .form-textarea {
   width: 100%;
   padding: 14px 18px;
-  border: 1px solid #E2E8F0;
+  border: 1px solid var(--silver-gray);
   border-radius: var(--radius-sm);
   background: #FFFFFF;
   font-family: var(--font-body);
@@ -268,8 +275,8 @@ button {
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   outline: none;
-  border-color: var(--sea-green);
-  box-shadow: 0 0 0 3px rgba(34, 105, 62, 0.18);
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
 }
 
 /* Modal Overlay */
@@ -279,7 +286,7 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(42, 54, 51, 0.88);
+  background: rgba(26, 37, 48, 0.85);
   backdrop-filter: blur(8px);
   z-index: 1000;
   display: flex;
@@ -326,3 +333,4 @@ button {
     gap: 24px;
   }
 }
+

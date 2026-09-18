@@ -5,11 +5,11 @@ import { Building2, MapPin, Phone, Mail, ShieldCheck, Share2 } from 'lucide-reac
 export function Footer() {
   return (
     <footer style={{
-      backgroundColor: '#090D16',
+      backgroundColor: '#121A22',
       color: '#94A3B8',
       paddingTop: '80px',
       paddingBottom: '40px',
-      borderTop: '1px solid rgba(212, 175, 55, 0.2)'
+      borderTop: '1px solid rgba(197, 160, 89, 0.25)'
     }}>
       <div className="container">
         <div style={{
@@ -20,19 +20,19 @@ export function Footer() {
         }}>
           {/* Brand Info */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-              <div style={{
-                width: '40px',
-                height: '40px',
-                borderRadius: '10px',
-                background: 'var(--gold-gradient)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#0F172A'
-              }}>
-                <Building2 size={22} strokeWidth={2.5} />
-              </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '20px' }}>
+              <img 
+                src="/logo.jpg" 
+                alt="Antonio Hernández Inmobiliaria" 
+                style={{
+                  height: '48px',
+                  width: '48px',
+                  borderRadius: '10px',
+                  objectFit: 'cover',
+                  border: '1.5px solid rgba(197, 160, 89, 0.4)',
+                  boxShadow: '0 0 12px rgba(197, 160, 89, 0.25)'
+                }} 
+              />
               <div style={{ fontSize: '1.2rem', fontWeight: 800, color: '#FFFFFF', fontFamily: 'var(--font-heading)' }}>
                 ANTONIO HERNÁNDEZ
               </div>
@@ -128,8 +128,8 @@ export function Footer() {
                 marginTop: '12px',
                 padding: '12px',
                 borderRadius: '8px',
-                background: 'rgba(212, 175, 55, 0.1)',
-                border: '1px solid rgba(212, 175, 55, 0.2)',
+                background: 'rgba(197, 160, 89, 0.1)',
+                border: '1px solid rgba(197, 160, 89, 0.25)',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '10px',

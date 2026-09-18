@@ -28,10 +28,10 @@ export function ServicesPage() {
     <div>
       {/* Header Banner */}
       <section style={{
-        background: 'linear-gradient(180deg, #090D16 0%, #0F172A 100%)',
+        background: 'linear-gradient(180deg, #121A22 0%, #1A2530 100%)',
         color: '#FFFFFF',
         padding: '60px 0 40px 0',
-        borderBottom: '1px solid rgba(212,175,55,0.2)'
+        borderBottom: '1px solid rgba(197, 160, 89, 0.25)'
       }}>
         <div className="container">
           <span className="gold-badge dark" style={{ marginBottom: '12px' }}>Asesoría Especializada</span>
@@ -52,7 +52,7 @@ export function ServicesPage() {
                 width: '64px',
                 height: '64px',
                 borderRadius: '16px',
-                background: 'rgba(212, 175, 55, 0.15)',
+                background: 'rgba(197, 160, 89, 0.15)',
                 color: 'var(--navy-deep)',
                 display: 'flex',
                 alignItems: 'center',
@@ -80,7 +80,7 @@ export function ServicesPage() {
                 width: '64px',
                 height: '64px',
                 borderRadius: '16px',
-                background: 'rgba(212, 175, 55, 0.15)',
+                background: 'rgba(197, 160, 89, 0.15)',
                 color: 'var(--navy-deep)',
                 display: 'flex',
                 alignItems: 'center',
@@ -108,7 +108,7 @@ export function ServicesPage() {
                 width: '64px',
                 height: '64px',
                 borderRadius: '16px',
-                background: 'rgba(212, 175, 55, 0.15)',
+                background: 'rgba(197, 160, 89, 0.15)',
                 color: 'var(--navy-deep)',
                 display: 'flex',
                 alignItems: 'center',
@@ -140,7 +140,7 @@ export function ServicesPage() {
           <div className="glass-card-dark" style={{
             padding: '48px',
             borderRadius: '24px',
-            background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+            background: 'linear-gradient(135deg, #121A22 0%, #1A2530 100%)',
             border: '1px solid var(--gold-primary)'
           }}>
             <div className="grid-2" style={{ alignItems: 'center' }}>
@@ -165,7 +165,7 @@ export function ServicesPage() {
 
               {/* Form */}
               <form onSubmit={handleSubmit} style={{
-                background: 'rgba(15, 23, 42, 0.9)',
+                background: 'rgba(26, 37, 48, 0.9)',
                 padding: '32px',
                 borderRadius: '20px',
                 border: '1px solid rgba(255,255,255,0.1)'

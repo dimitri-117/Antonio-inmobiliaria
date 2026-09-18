@@ -24,7 +24,7 @@ export function Home() {
       <section style={{
         position: 'relative',
         minHeight: '88vh',
-        background: 'linear-gradient(180deg, rgba(9, 13, 22, 0.75) 0%, rgba(15, 23, 42, 0.95) 100%), url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80") center/cover no-repeat',
+        background: 'linear-gradient(180deg, rgba(18, 26, 34, 0.75) 0%, rgba(26, 37, 48, 0.95) 100%), url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80") center/cover no-repeat',
         display: 'flex',
         alignItems: 'center',
         color: '#FFFFFF',
@@ -72,7 +72,7 @@ export function Home() {
             <div className="glass-card-dark" style={{
               padding: '28px',
               borderRadius: '24px',
-              border: '1px solid rgba(212,175,55,0.3)',
+              border: '1px solid rgba(197, 160, 89, 0.3)',
               boxShadow: '0 20px 50px rgba(0,0,0,0.4)',
               textAlign: 'left'
             }}>
@@ -90,7 +90,7 @@ export function Home() {
                     className="form-select"
                     value={heroOperation}
                     onChange={(e) => setHeroOperation(e.target.value)}
-                    style={{ backgroundColor: '#090D16', color: '#FFFFFF', borderColor: 'rgba(255,255,255,0.15)' }}
+                    style={{ backgroundColor: '#1A2530', color: '#FFFFFF', borderColor: 'rgba(255,255,255,0.15)' }}
                   >
                     <option value="Todas">Venta y Renta</option>
                     <option value="Venta">Solo Venta</option>
@@ -106,7 +106,7 @@ export function Home() {
                     className="form-select"
                     value={heroZone}
                     onChange={(e) => setHeroZone(e.target.value)}
-                    style={{ backgroundColor: '#090D16', color: '#FFFFFF', borderColor: 'rgba(255,255,255,0.15)' }}
+                    style={{ backgroundColor: '#1A2530', color: '#FFFFFF', borderColor: 'rgba(255,255,255,0.15)' }}
                   >
                     <option value="Todas">Todas las Zonas</option>
                     <option value="Altozano">Altozano</option>
@@ -125,7 +125,7 @@ export function Home() {
                     className="form-select"
                     value={heroType}
                     onChange={(e) => setHeroType(e.target.value)}
-                    style={{ backgroundColor: '#090D16', color: '#FFFFFF', borderColor: 'rgba(255,255,255,0.15)' }}
+                    style={{ backgroundColor: '#1A2530', color: '#FFFFFF', borderColor: 'rgba(255,255,255,0.15)' }}
                   >
                     <option value="Todos">Todos los Tipos</option>
                     <option value="Residencia">Residencia</option>
@@ -199,7 +199,7 @@ export function Home() {
                     top: '16px',
                     left: '16px',
                     background: 'var(--gold-gradient)',
-                    color: '#0F172A',
+                    color: '#FFFFFF',
                     fontWeight: 700,
                     padding: '4px 12px',
                     borderRadius: '8px',
@@ -211,7 +211,7 @@ export function Home() {
                     position: 'absolute',
                     bottom: '16px',
                     right: '16px',
-                    background: 'rgba(15, 23, 42, 0.85)',
+                    background: 'rgba(26, 37, 48, 0.85)',
                     color: '#FFFFFF',
                     backdropFilter: 'blur(8px)',
                     fontWeight: 700,
@@ -292,7 +292,7 @@ export function Home() {
                 width: '60px',
                 height: '60px',
                 borderRadius: '16px',
-                background: 'rgba(212, 175, 55, 0.15)',
+                background: 'rgba(197, 160, 89, 0.15)',
                 color: 'var(--gold-primary)',
                 display: 'flex',
                 alignItems: 'center',
@@ -316,7 +316,7 @@ export function Home() {
                 width: '60px',
                 height: '60px',
                 borderRadius: '16px',
-                background: 'rgba(212, 175, 55, 0.15)',
+                background: 'rgba(197, 160, 89, 0.15)',
                 color: 'var(--gold-primary)',
                 display: 'flex',
                 alignItems: 'center',
@@ -340,7 +340,7 @@ export function Home() {
                 width: '60px',
                 height: '60px',
                 borderRadius: '16px',
-                background: 'rgba(212, 175, 55, 0.15)',
+                background: 'rgba(197, 160, 89, 0.15)',
                 color: 'var(--gold-primary)',
                 display: 'flex',
                 alignItems: 'center',
@@ -384,7 +384,7 @@ export function Home() {
                 position: 'absolute',
                 bottom: '-20px',
                 right: '20px',
-                background: '#0F172A',
+                background: '#1A2530',
                 color: '#FFFFFF',
                 padding: '20px 28px',
                 borderRadius: '16px',
@@ -482,11 +482,11 @@ export function Home() {
 
       {/* LEAD MAGNET / CALL TO ACTION BANNER */}
       <section style={{
-        background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+        background: 'linear-gradient(135deg, #121A22 0%, #1A2530 100%)',
         color: '#FFFFFF',
         padding: '80px 0',
-        borderTop: '1px solid rgba(212,175,55,0.3)',
-        borderBottom: '1px solid rgba(212,175,55,0.3)'
+        borderTop: '1px solid rgba(197, 160, 89, 0.3)',
+        borderBottom: '1px solid rgba(197, 160, 89, 0.3)'
       }}>
         <div className="container">
           <div style={{

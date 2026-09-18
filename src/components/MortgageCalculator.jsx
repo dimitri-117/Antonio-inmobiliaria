@@ -38,8 +38,8 @@ export function MortgageCalculator() {
           width: '42px',
           height: '42px',
           borderRadius: '10px',
-          background: 'rgba(212, 175, 55, 0.15)',
-          color: '#B45309',
+          background: 'rgba(197, 160, 89, 0.15)',
+          color: 'var(--gold-primary)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
@@ -138,14 +138,14 @@ export function MortgageCalculator() {
 
         {/* Output Results Card */}
         <div style={{
-          background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+          background: 'linear-gradient(135deg, #121A22 0%, #1A2530 100%)',
           borderRadius: '20px',
           padding: '32px',
           color: '#FFFFFF',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          border: '1px solid rgba(212,175,55,0.3)',
+          border: '1px solid rgba(197, 160, 89, 0.3)',
           boxShadow: 'var(--shadow-gold)'
         }}>
           <div>

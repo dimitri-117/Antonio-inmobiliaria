@@ -7,10 +7,10 @@ export function AboutPage() {
     <div>
       {/* Header Banner */}
       <section style={{
-        background: 'linear-gradient(180deg, #090D16 0%, #0F172A 100%)',
+        background: 'linear-gradient(180deg, #121A22 0%, #1A2530 100%)',
         color: '#FFFFFF',
         padding: '60px 0 40px 0',
-        borderBottom: '1px solid rgba(212,175,55,0.2)'
+        borderBottom: '1px solid rgba(197, 160, 89, 0.25)'
       }}>
         <div className="container">
           <span className="gold-badge dark" style={{ marginBottom: '12px' }}>Conóceme</span>
@@ -88,7 +88,7 @@ export function AboutPage() {
                 top: '-20px',
                 left: '-20px',
                 background: 'var(--gold-gradient)',
-                color: '#0F172A',
+                color: '#FFFFFF',
                 padding: '16px 24px',
                 borderRadius: '16px',
                 fontWeight: 800,
