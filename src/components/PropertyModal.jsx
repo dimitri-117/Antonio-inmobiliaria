@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { X, Bed, Bath, Maximize, MapPin, CheckCircle, MessageCircle, Calendar, Share2, Tag } from 'lucide-react';
+import { X, Bed, Bath, Maximize, MapPin, CheckCircle, MessageCircle, Tag } from 'lucide-react';
 import { trackContactEvent } from '../utils/analytics';
 
 export function PropertyModal({ property, onClose }) {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   if (!property) return null;
 
-  const [activeImage, setActiveImage] = useState(property.image);
+  const activeImage = selectedImage || property.image;
 
   const whatsappMessage = `Hola Antonio, me gustaría solicitar una cita o más detalles para la propiedad: "${property.title}" (${property.priceFormatted}) en ${property.location}.`;
   const whatsappUrl = `https://wa.me/524439242702?text=${encodeURIComponent(whatsappMessage)}`;
@@ -92,7 +94,7 @@ export function PropertyModal({ property, onClose }) {
                 key={idx}
                 src={imgUrl}
                 alt=""
-                onClick={() => setActiveImage(imgUrl)}
+                onClick={() => setSelectedImage(imgUrl)}
                 style={{
                   width: '80px',
                   height: '60px',
