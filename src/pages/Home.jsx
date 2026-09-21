@@ -21,56 +21,56 @@ export function Home() {
   return (
     <div>
       {/* HERO SECTION */}
-      <section style={{
+      <section className="hero-section" style={{
         position: 'relative',
         minHeight: '88vh',
         background: 'linear-gradient(180deg, rgba(18, 26, 34, 0.75) 0%, rgba(26, 37, 48, 0.95) 100%), url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80") center/cover no-repeat',
         display: 'flex',
         alignItems: 'center',
         color: '#FFFFFF',
-        padding: '80px 0'
+        padding: '70px 0'
       }}>
-        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+        <div className="container hero-container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ maxWidth: '850px', margin: '0 auto', textAlign: 'center' }}>
             
-            <div className="gold-badge dark animate-slide-up" style={{ marginBottom: '24px' }}>
+            <div className="gold-badge dark animate-slide-up hero-badge" style={{ marginBottom: '20px' }}>
               <Award size={14} /> Asesor Inmobiliario Independiente en Morelia
             </div>
 
-            <h1 style={{
-              fontSize: 'clamp(2.5rem, 5vw, 4.2rem)',
+            <h1 className="hero-title" style={{
+              fontSize: 'clamp(1.85rem, 5vw, 4.2rem)',
               fontWeight: 800,
-              lineHeight: 1.15,
-              marginBottom: '24px',
+              lineHeight: 1.25,
+              marginBottom: '20px',
               color: '#FFFFFF',
               letterSpacing: '-0.02em'
             }}>
               Encuentra el hogar de tus sueños o vende tu propiedad <span className="gold-text">al mejor precio.</span>
             </h1>
 
-            <p style={{
-              fontSize: 'clamp(1.1rem, 2vw, 1.3rem)',
+            <p className="hero-subtitle" style={{
+              fontSize: 'clamp(1rem, 2vw, 1.25rem)',
               color: '#CBD5E1',
-              marginBottom: '40px',
+              marginBottom: '36px',
               maxWidth: '720px',
-              margin: '0 auto 40px auto',
-              lineHeight: 1.6
+              margin: '0 auto 36px auto',
+              lineHeight: 1.65
             }}>
               Asesoría inmobiliaria experta, transparente y personalizada en <strong style={{ color: 'var(--gold-primary)' }}>Morelia, Michoacán</strong>. Certeza legal y atención exclusiva de principio a fin.
             </p>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px', marginBottom: '60px' }}>
-              <Link to="/propiedades" className="btn-primary" style={{ padding: '16px 36px', fontSize: '1.05rem' }}>
-                <Search size={20} /> Ver Propiedades
+            <div className="hero-cta-group" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px', marginBottom: '52px' }}>
+              <Link to="/propiedades" className="btn-primary hero-btn-main" style={{ padding: '15px 32px', fontSize: '1rem' }}>
+                <Search size={18} /> Ver Propiedades
               </Link>
-              <Link to="/servicios" className="btn-secondary" style={{ padding: '16px 36px', fontSize: '1.05rem' }}>
-                <TrendingUp size={20} /> Quiero Vender mi Propiedad
+              <Link to="/servicios" className="btn-secondary hero-btn-sub" style={{ padding: '15px 32px', fontSize: '1rem' }}>
+                <TrendingUp size={18} /> Quiero Vender mi Propiedad
               </Link>
             </div>
 
             {/* HERO QUICK SEARCH FILTER BAR */}
-            <div className="glass-card-dark" style={{
-              padding: '28px',
+            <div className="glass-card-dark hero-filter-card" style={{
+              padding: '24px',
               borderRadius: '24px',
               border: '1px solid rgba(197, 160, 89, 0.3)',
               boxShadow: '0 20px 50px rgba(0,0,0,0.4)',
