@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Calculator, DollarSign, Percent, Calendar, ShieldCheck, ArrowRight } from 'lucide-react';
+import { trackContactEvent } from '../utils/analytics';
 
 export function MortgageCalculator() {
   const [propertyPrice, setPropertyPrice] = useState(4500000);
@@ -183,6 +184,7 @@ export function MortgageCalculator() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackContactEvent('Calculadora Hipotecaria - Pre-autorizar', { property_price: propertyPrice, down_payment: downPaymentPercent })}
             className="btn-primary"
             style={{ width: '100%', padding: '14px', fontSize: '0.95rem' }}
           >

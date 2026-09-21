@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import { trackContactEvent } from '../utils/analytics';
 
 export function WhatsAppButton({ propertyTitle }) {
   const message = propertyTitle 
@@ -47,6 +48,7 @@ export function WhatsAppButton({ propertyTitle }) {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackContactEvent('WhatsApp Flotante', { property: propertyTitle || 'General' })}
         style={{
           width: '60px',
           height: '60px',

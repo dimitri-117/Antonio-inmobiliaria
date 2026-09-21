@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X, Bed, Bath, Maximize, MapPin, CheckCircle, MessageCircle, Calendar, Share2, Tag } from 'lucide-react';
+import { trackContactEvent } from '../utils/analytics';
 
 export function PropertyModal({ property, onClose }) {
   if (!property) return null;
@@ -141,6 +142,7 @@ export function PropertyModal({ property, onClose }) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackContactEvent('Modal Propiedad - Solicitar Visita', { property_title: property.title, price: property.priceFormatted })}
                 className="btn-primary"
                 style={{ padding: '12px 24px' }}
               >
@@ -240,6 +242,7 @@ export function PropertyModal({ property, onClose }) {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackContactEvent('Modal Propiedad - Hablar por WhatsApp', { property_title: property.title, price: property.priceFormatted })}
               className="btn-primary"
               style={{ padding: '12px 24px' }}
             >

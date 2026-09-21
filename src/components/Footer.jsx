@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Building2, MapPin, Phone, Mail, ShieldCheck, Share2 } from 'lucide-react';
+import { trackContactEvent } from '../utils/analytics';
 
 export function Footer() {
   return (
@@ -116,7 +117,7 @@ export function Footer() {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <Phone size={20} color="var(--gold-primary)" style={{ flexShrink: 0 }} />
-                <a href="https://wa.me/524439242702" target="_blank" rel="noreferrer" style={{ color: '#FFFFFF', fontWeight: 600 }}>
+                <a href="https://wa.me/524439242702" target="_blank" rel="noreferrer" onClick={() => trackContactEvent('WhatsApp Footer')} style={{ color: '#FFFFFF', fontWeight: 600 }}>
                   +52 443 924 2702
                 </a>
               </div>

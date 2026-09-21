@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, MessageCircle, Clock, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { trackContactEvent } from '../utils/analytics';
 
 export function ContactPage() {
   const [formSent, setFormSent] = useState(false);
@@ -13,6 +14,10 @@ export function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    trackContactEvent('Formulario de Contacto', {
+      interest: contactData.interest,
+      user_name: contactData.name
+    });
     setFormSent(true);
   };
 
@@ -164,6 +169,7 @@ export function ContactPage() {
                   href="https://wa.me/524439242702?text=Hola%20Antonio,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre..."
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackContactEvent('WhatsApp Contacto Directo')}
                   className="btn-primary"
                   style={{ width: '100%', padding: '14px', justifyContent: 'center' }}
                 >
@@ -186,7 +192,7 @@ export function ContactPage() {
                     <Phone size={24} color="var(--gold-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
                     <div>
                       <h4 style={{ fontSize: '1rem', color: 'var(--navy-deep)' }}>Teléfono Directo / WhatsApp</h4>
-                      <a href="tel:+524439242702" style={{ color: 'var(--gold-primary)', fontWeight: 700, fontSize: '1rem' }}>
+                      <a href="tel:+524439242702" onClick={() => trackContactEvent('Llamada Telefonica Directa')} style={{ color: 'var(--gold-primary)', fontWeight: 700, fontSize: '1rem' }}>
                         +52 443 924 2702
                       </a>
                     </div>
@@ -244,6 +250,7 @@ export function ContactPage() {
                 href="https://wa.me/524439242702?text=Hola%20Antonio,%20quisiera%20agendar%20una%20cita%20presencial%20en%20Morelia."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackContactEvent('WhatsApp Agendar Cita')}
                 className="btn-primary"
               >
                 Agendar Cita Presencial en Morelia

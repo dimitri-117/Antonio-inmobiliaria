@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Award, Users, HeartHandshake, CheckCircle2, PhoneCall, Building2, MapPin } from 'lucide-react';
+import { trackContactEvent } from '../utils/analytics';
 
 export function AboutPage() {
   return (
@@ -63,6 +64,7 @@ export function AboutPage() {
                 href="https://wa.me/524439242702?text=Hola%20Antonio,%20me%20gustar%C3%ADa%20platicar%20contigo%20sobre%20asesor%C3%ADa%20inmobiliaria."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackContactEvent('WhatsApp Sobre Mi')}
                 className="btn-primary"
               >
                 <PhoneCall size={18} /> Conversar Directamente por WhatsApp
