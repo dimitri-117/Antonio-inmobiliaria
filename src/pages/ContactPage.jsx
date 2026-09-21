@@ -4,21 +4,47 @@ import { trackContactEvent } from '../utils/analytics';
 
 export function ContactPage() {
   const [formSent, setFormSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [contactData, setContactData] = useState({
-    name: '',
+    nombre: '',
     email: '',
-    phone: '',
-    interest: 'Comprar una propiedad',
-    message: ''
+    telefono: '',
+    interes: 'Comprar una propiedad',
+    mensaje: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    const form = e.target;
+
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      });
+    } catch (error) {
+      console.error('Error enviando formulario a Netlify Forms:', error);
+    }
+
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Contact');
+    }
     trackContactEvent('Formulario de Contacto', {
-      interest: contactData.interest,
-      user_name: contactData.name
+      interest: contactData.interes,
+      user_name: contactData.nombre
     });
+
+    setIsSubmitting(false);
     setFormSent(true);
+    setContactData({
+      nombre: '',
+      email: '',
+      telefono: '',
+      interes: 'Comprar una propiedad',
+      mensaje: ''
+    });
   };
 
   return (
@@ -53,24 +79,35 @@ export function ContactPage() {
               </p>
 
               {formSent ? (
-                <div style={{ textAlign: 'center', padding: '48px 24px', background: '#F8FAFC', borderRadius: '16px' }}>
-                  <CheckCircle2 size={56} color="var(--gold-primary)" style={{ margin: '0 auto 16px auto' }} />
+                <div style={{ textAlign: 'center', padding: '44px 24px', background: '#F0FDF4', borderRadius: '16px', border: '1px solid #10B981' }}>
+                  <CheckCircle2 size={56} color="#10B981" style={{ margin: '0 auto 16px auto' }} />
                   <h3 style={{ fontSize: '1.4rem', color: 'var(--navy-deep)', marginBottom: '8px' }}>¡Mensaje Enviado con Éxito!</h3>
-                  <p style={{ color: 'var(--text-body)', fontSize: '0.95rem' }}>
-                    Gracias <strong>{contactData.name}</strong>. Antonio Hernández se pondrá en contacto contigo muy pronto.
+                  <p style={{ color: 'var(--text-body)', fontSize: '0.98rem', lineHeight: 1.6 }}>
+                    Gracias, hemos recibido tu mensaje. Nos comunicaremos contigo a la brevedad.
                   </p>
+                  <button 
+                    type="button" 
+                    onClick={() => setFormSent(false)} 
+                    className="btn-primary" 
+                    style={{ marginTop: '24px', padding: '10px 22px', fontSize: '0.9rem' }}
+                  >
+                    Enviar otro mensaje
+                  </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit}>
+                <form name="contacto" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+                  <input type="hidden" name="form-name" value="contacto" />
+
                   <div className="form-group">
                     <label className="form-label">Nombre Completo:</label>
                     <input 
                       type="text" 
+                      name="nombre"
                       required 
                       placeholder="Ej. María Elena Torres"
                       className="form-input" 
-                      value={contactData.name}
-                      onChange={(e) => setContactData({...contactData, name: e.target.value})}
+                      value={contactData.nombre}
+                      onChange={(e) => setContactData({...contactData, nombre: e.target.value})}
                     />
                   </div>
 
@@ -79,6 +116,7 @@ export function ContactPage() {
                       <label className="form-label">Correo Electrónico:</label>
                       <input 
                         type="email" 
+                        name="email"
                         required 
                         placeholder="correo@ejemplo.com"
                         className="form-input" 
@@ -90,11 +128,12 @@ export function ContactPage() {
                       <label className="form-label">Teléfono / WhatsApp:</label>
                       <input 
                         type="tel" 
+                        name="telefono"
                         required 
                         placeholder="+52 443..."
                         className="form-input" 
-                        value={contactData.phone}
-                        onChange={(e) => setContactData({...contactData, phone: e.target.value})}
+                        value={contactData.telefono}
+                        onChange={(e) => setContactData({...contactData, telefono: e.target.value})}
                       />
                     </div>
                   </div>
@@ -102,9 +141,10 @@ export function ContactPage() {
                   <div className="form-group">
                     <label className="form-label">¿En qué te puedo ayudar?</label>
                     <select 
+                      name="interes"
                       className="form-select"
-                      value={contactData.interest}
-                      onChange={(e) => setContactData({...contactData, interest: e.target.value})}
+                      value={contactData.interes}
+                      onChange={(e) => setContactData({...contactData, interes: e.target.value})}
                     >
                       <option value="Comprar una propiedad">Quiero comprar una propiedad en Morelia</option>
                       <option value="Vender mi propiedad">Quiero vender una propiedad (Avalúo)</option>
@@ -117,16 +157,22 @@ export function ContactPage() {
                   <div className="form-group">
                     <label className="form-label">Mensaje o Detalles Adicionales:</label>
                     <textarea 
+                      name="mensaje"
                       rows={4} 
                       placeholder="Escribe tus requerimientos (ubicación preferida, presupuesto, tiempo estimado)..."
                       className="form-textarea"
-                      value={contactData.message}
-                      onChange={(e) => setContactData({...contactData, message: e.target.value})}
+                      value={contactData.mensaje}
+                      onChange={(e) => setContactData({...contactData, mensaje: e.target.value})}
                     />
                   </div>
 
-                  <button type="submit" className="btn-primary" style={{ width: '100%', padding: '16px', fontSize: '1rem', marginTop: '12px' }}>
-                    <Send size={18} /> Enviar Solicitud de Asesoría
+                  <button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="btn-primary" 
+                    style={{ width: '100%', padding: '16px', fontSize: '1rem', marginTop: '12px', opacity: isSubmitting ? 0.7 : 1 }}
+                  >
+                    <Send size={18} /> {isSubmitting ? 'Enviando mensaje...' : 'Enviar Solicitud de Asesoría'}
                   </button>
                 </form>
               )}
