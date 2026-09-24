@@ -35,8 +35,8 @@ export const properties = [
   {
     id: "prop-2",
     title: "Residencia Altalia - Syrah",
-    price: 6590000,
-    priceFormatted: "$6,590,000 MXN",
+    price: 6722000,
+    priceFormatted: "$6,722,000 MXN",
     location: "blvrd Juan Pablo II, Ejido Santa Maria de Guido",
     zone: "altozano, Santa Maria de Guido",
     type: "Residencia",
@@ -78,8 +78,8 @@ export const properties = [
   {
     id: "prop-3",
     title: "Residencia Altalia - Pinot",
-    price: 6900000,
-    priceFormatted: "$6,900,000 MXN",
+    price: 7040000,
+    priceFormatted: "$7,040,000 MXN",
     location: "blvrd Juan Pablo II, Ejido Santa Maria de Guido",
     zone: "ALTOZANO",
     type: "Residencia",
@@ -141,8 +141,8 @@ export const properties = [
   {
     id: "prop-4",
     title: "Residencia Altalia - MERLOT",
-    price: 7300000,
-    priceFormatted: "$7,300,000 MXN",
+    price: 7450000,
+    priceFormatted: "$7,450,000 MXN",
     location: "blvrd Juan Pablo II, Ejido Santa Maria de Guido",
     zone: "ALTOZANO",
     type: "Residencia",
@@ -324,8 +324,8 @@ export const properties = [
   {
     id: "prop-8",
     title: "Real Castillejo - VERSALLES",
-    price: 2545000,
-    priceFormatted: "$2,500,000 - $2,590,000 MXN",
+    price: 2600000,
+    priceFormatted: "$2,600,000 MXN",
     location: "AV CANTERAS, TARIMBARO, MORELIA MICHOACAN",
     zone: "Real Castillejo",
     type: "Residencia",
