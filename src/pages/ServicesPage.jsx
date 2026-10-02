@@ -4,6 +4,7 @@ import {
   Building2, Key, TrendingUp, FileText, ShieldCheck, Calculator, 
   CheckCircle2, Send, PhoneCall, Award, Landmark
 } from 'lucide-react';
+import { trackContactEvent } from '../utils/analytics';
 
 export function ServicesPage() {
   const [valuationSubmitted, setValuationSubmitted] = useState(false);
@@ -18,6 +19,15 @@ export function ServicesPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Contact');
+    }
+    trackContactEvent('Formulario de Avalúo', {
+      property_type: formData.propertyType,
+      zone: formData.zone
+    });
+
     setValuationSubmitted(true);
     setTimeout(() => {
       alert(`¡Gracias ${formData.name}! Antonio Hernández ha recibido tu solicitud de avalúo comercial en ${formData.zone}. Se comunicará contigo vía WhatsApp en breve.`);
